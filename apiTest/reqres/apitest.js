@@ -42,7 +42,7 @@ describe('API test reqres.in', function() {
         console.log(res.body)
     });
 
-    it('user want to delete user', async() => {
+    it('user want to delete account', async() => {
        
         const res = await supertest(url.config.reqres)
         .del(path.baseurl.reqres.del_user)
