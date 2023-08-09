@@ -1,0 +1,11 @@
+{
+    "baseurl":{
+        "reqres": {
+            "get_list": "api/users?page",
+            "post_login": "api/login",
+            "put_update": "api/users",
+            "del_user": "api/users/2"
+        }
+    }
+
+}

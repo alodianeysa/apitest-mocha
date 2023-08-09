@@ -1,0 +1,159 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-09T06:51:48.259Z",
+    "end": "2023-08-09T06:51:49.841Z",
+    "duration": 1582,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0e4184ba-df10-49da-b4bf-48aa77b346c5",
+      "title": "",
+      "fullFile": "D:\\Mocha\\trial\\apiTest\\reqres\\apitest.js",
+      "file": "\\apiTest\\reqres\\apitest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c0a60f53-386a-418c-9d55-1351f4eb4b3b",
+          "title": "API test reqres.in",
+          "fullFile": "D:\\Mocha\\trial\\apiTest\\reqres\\apitest.js",
+          "file": "\\apiTest\\reqres\\apitest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "user want to login",
+              "fullTitle": "API test reqres.in user want to login",
+              "timedOut": false,
+              "duration": 534,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var tasks = \n{\n    \"email\": \"eve.holt@reqres.in\",\n    \"password\": \"cityslicka\"\n};\nconst res = await supertest(url.config.reqres)\n.post(path.baseurl.reqres.post_login)\n.send(tasks)\n.expect(200)\nassert(res.body)\nconsole.log(res.body)",
+              "err": {},
+              "uuid": "1f98ac9f-c6c6-4f62-9115-9d36e26d3577",
+              "parentUUID": "c0a60f53-386a-418c-9d55-1351f4eb4b3b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "user want to see list user",
+              "fullTitle": "API test reqres.in user want to see list user",
+              "timedOut": false,
+              "duration": 122,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await supertest(url.config.reqres)\n.get(path.baseurl.reqres.get_list)\n.expect(200)\nassert(res.body.data)\nconsole.log(res.body)",
+              "err": {},
+              "uuid": "8d3a6717-29d4-4676-82a5-775df9234966",
+              "parentUUID": "c0a60f53-386a-418c-9d55-1351f4eb4b3b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "user want to update detail user",
+              "fullTitle": "API test reqres.in user want to update detail user",
+              "timedOut": false,
+              "duration": 457,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var tasks = \n{\n    \"name\": \"morpheus\",\n    \"job\": \"zion resident\"\n};\nconst res = await supertest(url.config.reqres)\n.post(path.baseurl.reqres.put_update)\n.send(tasks)\n.expect(201)\nassert(res.body.name).to.be.equal(\"morpheus\")\nconsole.log(res.body)",
+              "err": {},
+              "uuid": "e320a540-e8ce-44ed-8395-951602409948",
+              "parentUUID": "c0a60f53-386a-418c-9d55-1351f4eb4b3b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "user want to delete user",
+              "fullTitle": "API test reqres.in user want to delete user",
+              "timedOut": false,
+              "duration": 450,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await supertest(url.config.reqres)\n .del(path.baseurl.reqres.del_user)\n// .send(tasks)\n .expect(204)\n assert(res.body)\n console.log(res.body)",
+              "err": {},
+              "uuid": "32ee0696-ea09-4350-a571-d1ed57824583",
+              "parentUUID": "c0a60f53-386a-418c-9d55-1351f4eb4b3b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1f98ac9f-c6c6-4f62-9115-9d36e26d3577",
+            "8d3a6717-29d4-4676-82a5-775df9234966",
+            "e320a540-e8ce-44ed-8395-951602409948",
+            "32ee0696-ea09-4350-a571-d1ed57824583"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1563,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 180000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 180000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reports/mochawesome/TestPositive"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
